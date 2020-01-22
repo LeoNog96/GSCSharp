@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gedis-265820",
+  "private_key_id": "9d7eeca25d01918b7bde230b27b4843c4d98ad71",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDkboo78xxpKhoe\nRmXYCXp8rSPjC+rqBm8Exz7bPzS1Pj9HBx7dU0mPePGSb1ekgbIgxqbR5QisBac1\ngPycV31EZMQ3JB2ZKRjsnT701sAtbyzAamME/KOUNY/2LI6wNLm+2v5EjN9mXuvY\njDJIprCYHYSmPG2/EjVnnbGRu1oGNBto4A89GiQIyzYB/cpnJAx47p1obMtDtV77\nxruL+eCifmK3UFAaDEhvgZcBaslZpJYOYcaa0e/V4EcykUCcVPwwW3rljtzntZ/n\nxg5yWbUybKlFM29b8h+VX99WylEW0dO+zvOQmMRYkWERXHaCIzrOnKd8CqbACut7\nDkmimV/rAgMBAAECggEABDl3HPy1/cvlh8HNiF1EgqHBFCXYRlOwIep9YxicJO3t\nxaaAD5/GsHyQGyEsAcLURH7n/uG5c1T3bqngAhQsIOOsLUjhsz9rUpTl4SlHjI+N\nyFEvW5xAejEzZF4WlXOkK79pDGN+jiobOnn9RBKxGV8SYPClJu9zRWNJMWTBmXO8\nTCV91/qW0ZB/GKS0uilxB2LxEBPGrwF8h38GB3fz3qldY3svW2Ll3ht+icwHavXl\nNz8Zrq2FUt4IvtsCWdxuKD3Dj3jA0HjqRf+gPNHr+/JBZEY3keOYclKVyvcona/4\nlVMo2k3lfH4I8ehLRTBorU/9SGbrth2HlwqH8SGSoQKBgQD0UZ8uCnDWFtVVfrZL\n5pBO6n+y0y5QPcWpUARVBoS48QWnJQFO3r+PIhkStAC9etLLMmiUyVrT6y7aq7Ka\nUM+SX+OgJ2DCOpTSXxj9GA79w8x1ys9RGN6LMZL+gD/NAF6JbeuTyu2AHehUYf+r\ncQJetg5hmduDEsAhatLIjQK2FQKBgQDvWndgdwFtLGbztFMIdSKyZeKSE8yu0YSB\n7OjxZp+J/hhnv8+sMzguh2rqQru+Wr16WqOqQtkdhkmVvP6AF2VNypIWd/0KXVf8\nO2Pvdo/Tw3xu7jkP4Ga62XGbOuGgopPC3Fkyrx8PV3zP3ZHFrzCEtZBCa9t4ypnZ\nJpioBTc9/wKBgQCvj3tXxS7h2FSB8+Sg09P8sSsD4BZWmJzRlmsWgfGbR65tNf0j\npJJ4EuN7ehdSENEqLFXUHICE6Wmovlo/4zPVFcxmiAVSbHAGX0mAjOow1aK1PgAN\nYVaBJSVgdd3ivJIyJOd0MwzI1DTfdfAXTMSMNDxPTBTdsfqXyMAgVpuNJQKBgGub\nqH/eAO4sQDzgnVP4FZlO5QX3kNYnrAMdl7yv/pnzetVqDtvES0Xf69lWF0IFWZpg\nlaQ+WY5EiWCgj2rXGdxXbkZbu4+lV6E2sj8+dnsmMBNPVqgkowruJ306g6XMcdHx\nbsiyoqwrERoC6z6M/KstVaYHB6zOqUxPZeJkNenRAoGAGq/kHIt2wlQqdvk0+U7h\nFOEK5dtTIs6t0Eb7B7Ld4q3lHeRBEYVIiK6XmVtwgknRP5KA+CYGIW2H5nN9K+Ps\nYoZY/u35qCGx4nWGQ0LIEY9MSqbJjW9B+yrMEGjGV3O/+MkBSleyXvSSKFBFhRvz\n7/fQDVENE6t3ogpYoKDBVR0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gedisnodeapi@gedis-265820.iam.gserviceaccount.com",
+  "client_id": "102313982727752553654",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gedisnodeapi%40gedis-265820.iam.gserviceaccount.com"
+}
