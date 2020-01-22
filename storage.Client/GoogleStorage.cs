@@ -5,19 +5,17 @@ using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Storage.V1;
 using Microsoft.Extensions.Configuration;
+using Util;
 
 namespace storage.Client
 {
     public class GoogleStorage : Storage
     {
         private readonly StorageClient _storageClient;
-        private string _bucketName;
 
-        public GoogleStorage(IConfiguration config = null)
+        public GoogleStorage()
         {
             _storageClient = StorageClient.Create(ConfigAuth());
-
-            _bucketName = config["bucketName"];
         }
 
         public GoogleCredential ConfigAuth()
@@ -25,31 +23,28 @@ namespace storage.Client
             return GoogleCredential.FromJson(GetKeyToJson());
         }
 
-        public override void ConfigBucketName(string bucketName)
-        {
-            _bucketName = bucketName;
-        }
-
         public string GetKeyToJson()
         {
-            var path = (ExecutionDirectoryPathName().Replace("\\","")+ "/Keys/GoogleKey.json") ;
+            var path = (Utils.ExecutionDirectoryPathName()+ "/Keys/GoogleKey.json") ;
 
             using StreamReader r = new StreamReader(path);
 
             return r.ReadToEnd();
         }
 
-        public override Task<FileStream> DownloadFile()
+        public override async Task DownloadFile(string bucketName, string name, string path)
         {
-            throw new System.NotImplementedException();
+            using var fileStream = new FileStream(path, FileMode.Create);
+
+            await _storageClient.DownloadObjectAsync(bucketName, name, fileStream);
         }
 
-        public override async Task<string> UploadFile(FileStream file, string name, string contentType)
+        public override async Task<string> UploadFile(FileStream file, string bucketName, string name, string contentType)
         {
-            var fileAcl = PredefinedObjectAcl.PublicRead;
+            var fileAcl = PredefinedObjectAcl.Private;
 
             var fileObject = await _storageClient.UploadObjectAsync(
-                bucket: _bucketName,
+                bucket: bucketName,
                 objectName: name,
                 contentType: contentType,
                 source: file,
@@ -57,13 +52,6 @@ namespace storage.Client
             );
 
             return fileObject.MediaLink;
-        }
-
-        public string ExecutionDirectoryPathName()
-        {
-            var dirPath = Assembly.GetExecutingAssembly().Location;
-            dirPath = Path.GetDirectoryName(dirPath);
-            return dirPath + @"\";
         }
     }
 }

@@ -9,6 +9,7 @@
 
 GoogleKey.json
 Keys/
+TempData/
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

@@ -1,4 +1,5 @@
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using uploadFile.Core.models;
@@ -28,6 +29,21 @@ namespace uploadFile.Core.Controllers
             }
 
             return Ok();
+        }
+
+        [HttpGet("download/{id}")]
+        public async Task<IActionResult> Download(string id) {
+            var path = await _service.DownloadFiles(id);
+
+            var memory = new MemoryStream();
+
+            using (var stream = new FileStream(path, FileMode.Open))
+            {
+                await stream.CopyToAsync(memory);
+            }
+            memory.Position = 0;
+
+            return File(memory, "application/octet-stream", Path.GetFileName(path));
         }
     }
 }
