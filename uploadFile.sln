@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uploadFile.Core", "uploadFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "storage.Client", "storage.Client\storage.Client.csproj", "{0F24B8DB-AF45-4A43-A723-14C6BC1BB865}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{3ADA9505-9727-4B50-8A9F-AC14D5764488}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{0F24B8DB-AF45-4A43-A723-14C6BC1BB865}.Release|x64.Build.0 = Release|Any CPU
 		{0F24B8DB-AF45-4A43-A723-14C6BC1BB865}.Release|x86.ActiveCfg = Release|Any CPU
 		{0F24B8DB-AF45-4A43-A723-14C6BC1BB865}.Release|x86.Build.0 = Release|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Debug|x64.Build.0 = Debug|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Debug|x86.Build.0 = Debug|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Release|x64.ActiveCfg = Release|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Release|x64.Build.0 = Release|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Release|x86.ActiveCfg = Release|Any CPU
+		{3ADA9505-9727-4B50-8A9F-AC14D5764488}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
