@@ -15,9 +15,7 @@ RUN dotnet restore
 
 COPY . .
 
-RUN dotnet test
-
-WORKDIR /src/Utils
+WORKDIR /src/Util
 RUN dotnet build -c Release -o /app
 
 WORKDIR /src/storage.Client
@@ -27,6 +25,7 @@ WORKDIR /src/uploadFile.Core
 RUN dotnet build -c Release -o /app
 
 FROM build AS publish
+
 RUN dotnet publish -c Release -o /app
 
 FROM base AS final
@@ -35,5 +34,14 @@ ENV TZ=America/Sao_Paulo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 WORKDIR /app
+
+RUN mkdir UploadTemp
+
+RUN mkdir DownloadTemp
+
+RUN mkdir Keys
+
+COPY ./storage.Client/Keys ./Keys
+
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "uploadFile.Core.dll"]
