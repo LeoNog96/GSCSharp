@@ -41,7 +41,7 @@ RUN mkdir DownloadTemp
 
 RUN mkdir Keys
 
-COPY ./storage.Client/Keys ./Keys
+# COPY ./storage.Client/Keys ./Keys
 
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "uploadFile.Core.dll"]
